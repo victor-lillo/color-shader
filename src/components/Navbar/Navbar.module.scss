@@ -1,0 +1,18 @@
+.navbar {
+  background-color: var(--color-dark-1);
+  color: var(--color-light-2);
+  padding: 1.4rem 0;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: var(--section-width);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  height: 5rem;
+  width: auto;
+}

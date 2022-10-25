@@ -1,0 +1,14 @@
+@use '@sass_settings/sizes.scss';
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__section {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+}

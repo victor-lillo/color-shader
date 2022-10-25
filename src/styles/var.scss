@@ -1,0 +1,22 @@
+@use '@sass_settings/sizes.scss';
+
+@font-face {
+  font-family: opensans;
+  src: url(../../public/fonts/open_sans/OpenSans-Regular.ttf);
+}
+
+:root {
+  --section-width: 90%;
+  --color-dark-1: #1e1e1e;
+  --color-dark-2: #121212;
+  --color-light-1: #ffff;
+  --color-light-2: rgb(222, 222, 222);
+
+  @media (min-width: sizes.$tablet) {
+    --section-width: 75%;
+  }
+
+  @media (min-width: sizes.$desktop) {
+    --section-width: 80%;
+  }
+}
