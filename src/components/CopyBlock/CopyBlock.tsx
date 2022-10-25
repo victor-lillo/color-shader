@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-
-import styles from './CopyBlock.module.scss'
 import { ColorObject } from '@types'
-import getCssCustomProperties from '@utils/getCssCustomProperties'
+import useCssCustomProperties from '@hooks/useCssCustomProperties'
+import styles from './CopyBlock.module.scss'
 
 export default function CopyBlock(props: { colorObj: ColorObject; inputColor: string; prefix: string }) {
-  const [isCopied, setIsCopied] = useState<boolean>(false)
   const textBlock = useRef<HTMLDivElement>(null)
+  const [isCopied, setIsCopied] = useState<boolean>(false)
+  const { customProperties, deleteOne } = useCssCustomProperties(props)
 
   useEffect(() => {
     setIsCopied(false)
@@ -19,18 +19,27 @@ export default function CopyBlock(props: { colorObj: ColorObject; inputColor: st
     }
   }
 
-  const parsedObj = getCssCustomProperties(props)
+  const handleDelete = (key: string) => {
+    deleteOne(key)
+  }
 
   return (
     <section className={styles.container}>
-      <button onClick={handleClick} className={styles['container__button']}>
+      <button
+        onClick={handleClick}
+        title={isCopied ? 'Already copied!' : 'Copy all the custom properties'}
+        className={styles['container__button']}
+      >
         {isCopied ? '✅' : '📝'}
       </button>
       <div className={styles['container__body']} ref={textBlock}>
-        {Object.entries(parsedObj).map(([key, value]) => {
+        {Object.entries(customProperties).map(([key, value]) => {
           return (
             <div className={styles.line} key={value} style={{ '--color': value } as React.CSSProperties}>
-              <span>{key}</span>: <span className={styles.line__value}>{value}</span>;
+              <span>{key}</span>: <span className={styles.line__value}>{value}</span>
+              <button title='Delete this line' onClick={() => handleDelete(key)} className={styles.line__button}>
+                ❌
+              </button>
             </div>
           )
         })}

@@ -44,7 +44,6 @@
 
 .line {
   white-space: nowrap;
-
   &__value {
     display: inline-block;
     background-color: var(--color);
@@ -52,6 +51,18 @@
     padding: 0.1rem 0.3rem;
     margin-right: 0.1rem;
     text-shadow: -1px -1px 3px white, 1px -1px 3px white, -1px 1px 3px white, 1px 1px 3px white;
+  }
+  &__button {
+    background: none;
+    border: none;
+    opacity: 0.2;
+    user-select: none;
+    margin-left: 3px;
+    @media (hover: hover) {
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
 
