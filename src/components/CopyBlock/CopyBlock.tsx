@@ -13,7 +13,7 @@ export default function CopyBlock(props: { colorObj: ColorObject; inputColor: st
 
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     if (textBlock.current) {
-      navigator.clipboard.writeText(textBlock.current.innerText)
+      navigator.clipboard.writeText(textBlock.current.innerText.replaceAll('❌', ''))
       setIsCopied(true)
     }
   }
@@ -35,7 +35,7 @@ export default function CopyBlock(props: { colorObj: ColorObject; inputColor: st
         {Object.entries(customProperties).map(([key, value]) => {
           return (
             <div className={styles.line} key={key} style={{ '--color': value } as React.CSSProperties}>
-              <span>{key}</span>: <span className={styles.line__value}>{value}</span>
+              <span>{key}</span>: <span className={styles.line__value}>{value}</span>;
               <button title='Delete this line' onClick={() => handleDelete(key)} className={styles.line__button}>
                 ❌
               </button>
