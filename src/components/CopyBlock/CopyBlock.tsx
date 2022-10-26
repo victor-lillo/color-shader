@@ -7,7 +7,6 @@ export default function CopyBlock(props: { colorObj: ColorObject; inputColor: st
   const textBlock = useRef<HTMLDivElement>(null)
   const [isCopied, setIsCopied] = useState<boolean>(false)
   const { customProperties, deleteOne } = useCssCustomProperties(props)
-
   useEffect(() => {
     setIsCopied(false)
   }, [props.colorObj, props.inputColor, props.prefix])
@@ -35,7 +34,7 @@ export default function CopyBlock(props: { colorObj: ColorObject; inputColor: st
       <div className={styles['container__body']} ref={textBlock}>
         {Object.entries(customProperties).map(([key, value]) => {
           return (
-            <div className={styles.line} key={value} style={{ '--color': value } as React.CSSProperties}>
+            <div className={styles.line} key={key} style={{ '--color': value } as React.CSSProperties}>
               <span>{key}</span>: <span className={styles.line__value}>{value}</span>
               <button title='Delete this line' onClick={() => handleDelete(key)} className={styles.line__button}>
                 ❌
