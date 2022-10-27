@@ -1,10 +1,5 @@
 @use '@sass_settings/sizes.scss';
 
-@font-face {
-  font-family: opensans;
-  src: url(../../public/fonts/open_sans/OpenSans-Regular.ttf);
-}
-
 :root {
   --section-width: 90%;
   --color-dark-1: #1e1e1e;
