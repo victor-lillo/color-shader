@@ -11,7 +11,6 @@
     "github-update": "node dev/github-update.js"
   },
   "dependencies": {
-    "axios": "^0.27.2",
     "classnames-creator": "^1.0.6",
     "next": "^12.2.0",
     "react": "18.2.0",
