@@ -2,15 +2,15 @@
 
 #### Dark, light and opacity shades
 
-[<img src="gh_images/screenshot_1.png" />](https://color-shader.vercel.app/)
+[<img src="docs/screenshot_1.png" />](https://color-shader.vercel.app/)
 
 ### 🎨 Just select your color
 
-[<img src="gh_images/screenshot_2.png" />](https://color-shader.vercel.app/#b960e2)
+[<img src="docs/screenshot_2.png" />](https://color-shader.vercel.app/#b960e2)
 
 ### ⚙ Modify the prefix and the number of steps
 
-[<img src="gh_images/screenshot_3.png" />](https://color-shader.vercel.app/#b960e2/16)
+[<img src="docs/screenshot_3.png" />](https://color-shader.vercel.app/#b960e2/16)
 
 ### 📝 You can copy the color you want (just click on it!). Also, you can copy all the custom properties with your desired prefix, or delete ❌ unnecessary ones
 
