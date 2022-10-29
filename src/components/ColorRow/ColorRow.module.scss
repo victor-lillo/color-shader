@@ -5,4 +5,29 @@
   gap: 0.5rem;
   overflow-x: auto;
   padding: 1rem 0;
+  --scrollbar-border-radius: 1rem;
+
+  &::-webkit-scrollbar {
+    height: 0.9rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: var(--scrollbar-border-radius);
+    border: 1px solid lightgray;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--scrollbar-border-radius);
+    background-color: #d5d5d5;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #aaaaaa;
+      }
+    }
+
+    &:active {
+      background-color: #808080;
+    }
+  }
 }
