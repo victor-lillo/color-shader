@@ -12,7 +12,9 @@ const ColorPicker = ({
   quantity: number
   handleChange: ReactEventHandler
 }) => {
-  const normalizedColor = '#' + normalizeHex(color)
+  // Prevents '#' value warning in input color
+  const normalizedColor = color ? '#' + normalizeHex(color) : '#1e1e1e'
+
   return (
     <div style={{ '--picked-color': normalizedColor } as React.CSSProperties} className={styles.container}>
       <div className={styles['form-group']}>
