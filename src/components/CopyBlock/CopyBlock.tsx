@@ -7,6 +7,7 @@ export default function CopyBlock(props: { colorObj: ColorObject; inputColor: st
   const textBlock = useRef<HTMLDivElement>(null)
   const [isCopied, setIsCopied] = useState<boolean>(false)
   const { customProperties, deleteOne } = useCssCustomProperties(props)
+
   useEffect(() => {
     setIsCopied(false)
   }, [props.colorObj, props.inputColor, props.prefix])
@@ -20,6 +21,7 @@ export default function CopyBlock(props: { colorObj: ColorObject; inputColor: st
 
   const handleDelete = (key: string) => {
     deleteOne(key)
+    setIsCopied(false)
   }
 
   return (
