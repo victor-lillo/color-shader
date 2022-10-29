@@ -22,7 +22,7 @@ export default function ColorModule() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { value, name } = e.target as HTMLInputElement
     if (name === 'color') setColor(value)
-    if (name === 'quantity') setQuantity(parseInt(value))
+    if (name === 'quantity') setQuantity(value ? parseInt(value) : value)
   }
   return (
     <>
@@ -32,7 +32,7 @@ export default function ColorModule() {
 
       {color !== initialColorValue && validateHex(color) && (
         <section className='section'>
-          <ColorTable inputColor={color} number={quantity} />
+          <ColorTable inputColor={color} quantity={quantity} />
         </section>
       )}
     </>

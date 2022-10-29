@@ -7,6 +7,7 @@
   padding: 1rem 2rem;
   border-radius: 0.8rem;
   position: relative;
+  min-width: fit-content;
 
   &__button {
     border: none;
@@ -68,12 +69,12 @@
 
 @media (min-width: sizes.$tablet) {
   .container {
-    width: 65%;
+    width: 70%;
   }
 }
 
 @media (min-width: sizes.$desktop) {
   .container {
-    width: 40%;
+    width: 60%;
   }
 }

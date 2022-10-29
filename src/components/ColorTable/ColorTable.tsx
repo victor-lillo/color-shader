@@ -4,11 +4,11 @@ import CustomProperties from '@components/CustomProperties'
 import { getDarker, getLighter, getOpacities } from '@utils/colorFunctions'
 import styles from './ColorTable.module.scss'
 
-export default function ColorTable({ inputColor, number = 10 }: { number?: number; inputColor: string }) {
+export default function ColorTable({ inputColor, quantity = 1 }: { quantity?: number; inputColor: string }) {
   const colorObj: ColorObject = {
-    dark: getDarker(inputColor, number),
-    light: getLighter(inputColor, number),
-    opacity: getOpacities(inputColor, number),
+    dark: getDarker(inputColor, quantity),
+    light: getLighter(inputColor, quantity),
+    opacity: getOpacities(inputColor, quantity),
   }
 
   const { dark, light, opacity } = colorObj
