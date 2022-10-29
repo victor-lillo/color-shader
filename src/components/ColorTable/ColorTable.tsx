@@ -14,21 +14,25 @@ export default function ColorTable({ inputColor, number = 10 }: { number?: numbe
   const { dark, light, opacity } = colorObj
   return (
     <div className={styles.grid}>
-      <section className={styles.grid__section}>
-        <h1>Dark shades</h1>
-        <ColorRow array={dark} />
-      </section>
-      <section className={styles.grid__section}>
-        <h1>Light shades</h1>
-        <div className={styles.row}>
-          <ColorRow array={light} />
-        </div>
-      </section>
-      <section className={styles.grid__section}>
-        <h1>Opacity shades</h1>
-        <ColorRow array={opacity} />
-      </section>
-      <CustomProperties inputColor={inputColor} colorObj={colorObj} />
+      <div className={styles.grid__wrapper}>
+        <section className={styles.grid__section}>
+          <h1>Dark shades</h1>
+          <ColorRow array={dark} />
+        </section>
+        <section className={styles.grid__section}>
+          <h1>Light shades</h1>
+          <div className={styles.row}>
+            <ColorRow array={light} />
+          </div>
+        </section>
+        <section className={styles.grid__section}>
+          <h1>Opacity shades</h1>
+          <ColorRow array={opacity} />
+        </section>
+        <section className={styles.grid__section}>
+          <CustomProperties inputColor={inputColor} colorObj={colorObj} />
+        </section>
+      </div>
     </div>
   )
 }
