@@ -1,23 +1,23 @@
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
 import ColorPicker from '@components/ColorPicker'
 import ColorTable from '@components/ColorTable'
-import useStateFromPath from '@hooks/useStateFromPath'
+
 import validateHex from '@utils/validateHex'
+import useColorFromPath from '@hooks/useColorFromPath'
+import useQuantityFromPath from '@hooks/useQuantityFromPath'
+import useHandleRoutes from '@hooks/useHandleRoutes'
 
 const initialColorValue = ''
+const initialQuantityValue = 10
 
 export default function ColorModule() {
-  const router = useRouter()
-  const [color, setColor] = useStateFromPath(initialColorValue)
-  const [quantity, setQuantity] = useState(10)
-
-  useEffect(() => {
-    const timeout = window.setTimeout(() => {
-      router.push('/' + color)
-    }, 300)
-    return () => window.clearTimeout(timeout)
-  }, [color])
+  const [color, setColor] = useColorFromPath(initialColorValue)
+  const [quantity, setQuantity] = useQuantityFromPath(initialQuantityValue)
+  useHandleRoutes({
+    color,
+    quantity,
+    initialColorValue,
+    initialQuantityValue,
+  })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { value, name } = e.target as HTMLInputElement
