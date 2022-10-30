@@ -22,7 +22,7 @@ export default function ColorModule() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { value, name } = e.target as HTMLInputElement
     if (name === 'color') setColor(value)
-    if (name === 'quantity') setQuantity(value ? parseInt(value) : value)
+    if (name === 'quantity') setQuantity(parseInt(value)) // When empty -> isNaN
   }
   return (
     <>

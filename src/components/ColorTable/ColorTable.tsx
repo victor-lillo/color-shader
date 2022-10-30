@@ -5,10 +5,12 @@ import { getDarker, getLighter, getOpacities } from '@utils/colorFunctions'
 import styles from './ColorTable.module.scss'
 
 export default function ColorTable({ inputColor, quantity = 1 }: { quantity?: number; inputColor: string }) {
+  // As quantity could be NaN when parseInt(''), we catch the value here
+  const safeQuantity = isNaN(quantity) ? 1 : quantity
   const colorObj: ColorObject = {
-    dark: getDarker(inputColor, quantity),
-    light: getLighter(inputColor, quantity),
-    opacity: getOpacities(inputColor, quantity),
+    dark: getDarker(inputColor, safeQuantity),
+    light: getLighter(inputColor, safeQuantity),
+    opacity: getOpacities(inputColor, safeQuantity),
   }
 
   const { dark, light, opacity } = colorObj
