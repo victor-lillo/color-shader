@@ -24,7 +24,7 @@ const ColorCell = ({ color, percent }: { color: string; percent?: string }) => {
 
   return (
     <div className={styles.container}>
-      {percent && <p className={styles.number}>{`${percent}%`}</p>}
+      {percent && <p className={styles.text}>{`${percent}%`}</p>}
       <div
         className={classnames(styles.cell, { [styles['cell--copied']]: clicked, [styles['cell--copy']]: isHovering })}
         style={{ '--content': `${color}`, '--delay': `${timeToDissapear / 1000}s` } as React.CSSProperties}
