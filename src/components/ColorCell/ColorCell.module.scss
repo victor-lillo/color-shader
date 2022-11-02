@@ -8,6 +8,7 @@
 
 .cell {
   --color-light: white;
+  --transition-duration: 0.4s;
   background-color: var(--content);
   border: 1px solid lightgrey;
   border-radius: 0.8rem;
@@ -18,24 +19,23 @@
   justify-content: center;
 
   &:before {
+    content: '';
     opacity: 0;
-    transition: opacity 0.6s;
   }
 
   &--copy {
     &:before {
       content: '📝';
       opacity: 1;
-      transition: opacity 0.6s;
+      transition: opacity var(--transition-duration);
     }
   }
 
-  // TODO fix transition
   &--copied {
     &:before {
       content: '✅';
-      opacity: 1;
-      transition: opacity 0.6s;
+      opacity: 0;
+      transition: var(--transition-duration) opacity calc(var(--delay) - var(--transition-duration));
     }
   }
 }
