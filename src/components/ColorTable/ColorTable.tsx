@@ -12,8 +12,8 @@ export default function ColorTable({ inputColor, quantity = 1 }: { quantity?: nu
     light: getLighter(inputColor, safeQuantity),
     opacity: getOpacities(inputColor, safeQuantity),
   }
-
   const { dark, light, opacity } = colorObj
+
   return (
     <div className={styles.grid}>
       <div className={styles.grid__wrapper}>

@@ -7,7 +7,6 @@ body {
     'Helvetica Neue', sans-serif;
   height: 100%;
 
-  // Bold is weird with Open Sans, so:
   h1,
   h2,
   h3 {
@@ -35,6 +34,7 @@ body {
 .section {
   width: var(--section-width);
 }
+
 .container {
   display: flex;
   flex-direction: column;
