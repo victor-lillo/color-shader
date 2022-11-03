@@ -6,7 +6,7 @@
   display: flex;
   user-select: none;
   justify-content: center;
-  padding: 1rem 0;
+  padding: var(--size-spacing-2) 0;
 
   &__container {
     display: flex;

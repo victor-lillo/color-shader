@@ -4,7 +4,7 @@
   display: flex;
   gap: 0.5rem;
   overflow-x: auto;
-  padding: 1rem 0;
+  padding: var(--size-spacing-1) 0;
   --scrollbar-border-radius: 1rem;
 
   &::-webkit-scrollbar {

@@ -6,17 +6,17 @@
   justify-content: space-between;
   gap: 0.2rem;
   border: 1px solid #bdbdbd;
-  padding: 1rem 1.2rem;
+  padding: var(--size-spacing-1) var(--size-spacing-3);
   border-radius: 0.8rem;
   min-width: fit-content;
 
   &__button {
+    display: flex;
+    align-self: flex-start;
     border: none;
     background-color: lightgray;
     padding: 0.4rem 0.7rem;
     border-radius: 0.4rem;
-    display: flex;
-    align-self: flex-start;
     opacity: 1;
     transition: opacity 0.6s;
 
