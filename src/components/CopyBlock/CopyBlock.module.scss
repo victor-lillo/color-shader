@@ -2,23 +2,23 @@
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  gap: 0.2rem;
   border: 1px solid #bdbdbd;
-  padding: 1rem 2rem;
+  padding: 1rem 1.2rem;
   border-radius: 0.8rem;
-  position: relative;
   min-width: fit-content;
 
   &__button {
     border: none;
-    opacity: 1;
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-    transition: opacity 0.6s;
     background-color: lightgray;
     padding: 0.4rem 0.7rem;
     border-radius: 0.4rem;
+    display: flex;
+    align-self: flex-start;
+    opacity: 1;
+    transition: opacity 0.6s;
 
     @media (hover: hover) {
       &:hover {
@@ -34,6 +34,7 @@
   &__body {
     display: flex;
     flex-direction: column;
+    font-size: 0.9rem;
     gap: 0.1rem;
   }
 }
@@ -70,11 +71,5 @@
 @media (min-width: sizes.$tablet) {
   .container {
     width: 70%;
-  }
-}
-
-@media (min-width: sizes.$desktop) {
-  .container {
-    width: 60%;
   }
 }
