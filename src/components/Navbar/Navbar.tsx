@@ -12,7 +12,7 @@ function Navbar() {
     <>
       <header className={styles.navbar}>
         <div className={styles.navbar__container}>
-          <Link href='/' shallow>
+          <Link href='/'>
             <a>
               <Logo className={styles.logo} />
             </a>

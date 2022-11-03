@@ -13,7 +13,10 @@ const useColorFromPath = (initialValue: string) => {
   // The path should be a hex
   useEffect(() => {
     if (!isReady) return
-    if (!colorPath) return
+    if (!colorPath) {
+      setState('')
+      return
+    }
     if (validateHex(colorPath) || colorPath === '') setState(colorPath)
   }, [asPath])
   return [state, setState] as const
