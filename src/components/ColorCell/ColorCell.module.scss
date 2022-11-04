@@ -17,35 +17,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
-  &:before {
-    content: '📝';
+  &:before,
+  &:after {
+    position: absolute;
     opacity: 0;
     transition: opacity var(--transition-duration);
   }
 
+  &:before {
+    content: '📝';
+  }
+
+  &:after {
+    content: '✅';
+  }
+
   @media (hover: hover) {
-    &:hover {
-      &:before {
-        content: '📝';
-        opacity: 1;
-        transition: opacity var(--transition-duration);
-      }
+    &:hover:before {
+      opacity: 1;
+      transition: opacity var(--transition-duration);
     }
   }
 
   &--copied {
     &:before {
-      content: '✅';
-      opacity: 1;
-      animation: unbanish var(--transition-duration) calc(var(--delay) - var(--transition-duration));
+      content: none;
     }
-    // If we want  to "overwrite" the non-modified class hover, we need to create a new one
-    &:hover {
-      &:before {
-        content: '✅';
-        opacity: 1;
-      }
+
+    &:after {
+      animation: unbanish var(--delay);
     }
   }
 }
@@ -56,7 +58,13 @@
 }
 
 @keyframes unbanish {
-  to {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
