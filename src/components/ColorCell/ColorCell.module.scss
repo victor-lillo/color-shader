@@ -19,23 +19,33 @@
   justify-content: center;
 
   &:before {
-    content: '';
+    content: '📝';
     opacity: 0;
+    transition: opacity var(--transition-duration);
   }
 
-  &--copy {
-    &:before {
-      content: '📝';
-      opacity: 1;
-      transition: opacity var(--transition-duration);
+  @media (hover: hover) {
+    &:hover {
+      &:before {
+        content: '📝';
+        opacity: 1;
+        transition: opacity var(--transition-duration);
+      }
     }
   }
 
   &--copied {
     &:before {
       content: '✅';
-      opacity: 0;
-      transition: var(--transition-duration) opacity calc(var(--delay) - var(--transition-duration));
+      opacity: 1;
+      animation: unbanish var(--transition-duration) calc(var(--delay) - var(--transition-duration));
+    }
+    // If we want  to "overwrite" the non-modified class hover, we need to create a new one
+    &:hover {
+      &:before {
+        content: '✅';
+        opacity: 1;
+      }
     }
   }
 }
@@ -43,4 +53,10 @@
 .text {
   font-size: 1rem;
   color: var(--color-dark-3);
+}
+
+@keyframes unbanish {
+  to {
+    opacity: 0;
+  }
 }
