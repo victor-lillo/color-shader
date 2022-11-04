@@ -14,17 +14,11 @@ export default function CustomProperties(props: { colorObj: ColorObject; inputCo
   return (
     <section className={styles.container}>
       <h1>Custom properties</h1>
-      <div className={styles['form-group']}>
-        <label className={styles.text} htmlFor='prefix'>
+      <div className={styles['form']}>
+        <label className={styles['form__label']} htmlFor='prefix'>
           Set your prefix!
         </label>
-        <input
-          className={styles['form-group__input']}
-          onChange={handleChange}
-          type='text'
-          value={prefix}
-          name='prefix'
-        />
+        <input className={styles['form__input']} onChange={handleChange} type='text' value={prefix} name='prefix' />
       </div>
       <CopyBlock prefix={prefix} {...props} />
     </section>

@@ -7,18 +7,18 @@
   overflow-x: auto; // If custom properties are too long, scroll
 }
 
-.form-group {
+.form {
   display: flex;
-  align-items: center;
   gap: var(--size-spacing-2);
 
   &__input {
     text-indent: 5px;
+    width: 10rem;
   }
-}
-
-.text {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--color-dark-2);
+  &__label {
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-dark-2);
+  }
 }
