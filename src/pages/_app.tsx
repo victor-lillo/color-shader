@@ -1,6 +1,7 @@
 import '../styles/App.scss'
 import '../styles/var.scss'
 import '../styles/normalize.css'
+import '../styles/reset.local.css'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
