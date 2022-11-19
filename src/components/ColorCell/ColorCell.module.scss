@@ -47,7 +47,7 @@
     }
 
     &:after {
-      animation: unbanish var(--delay);
+      animation: unvanish var(--delay);
     }
   }
 }
@@ -57,7 +57,7 @@
   color: var(--color-dark-3);
 }
 
-@keyframes unbanish {
+@keyframes unvanish {
   0% {
     opacity: 1;
   }
