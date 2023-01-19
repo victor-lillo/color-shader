@@ -1,17 +1,21 @@
 import classnames from 'classnames-creator'
 import { useState } from 'react'
+import useWithHashStore from '@store/useWithHashStore'
 import styles from './ColorCell.module.scss'
 const ColorCell = ({ color, percent }: { color: string; percent?: string }) => {
   const [clicked, setClicked] = useState<boolean>(false)
 
-  const timeToDissapear = 2400
+  const TIME_TO_DISAPPEAR = 2400
 
+  const { withHash } = useWithHashStore()
   const handleClick = () => {
-    navigator.clipboard.writeText(color)
+    const copyColor = withHash ? color : color.replace('#', '')
+    console.log(withHash)
+    navigator.clipboard.writeText(copyColor)
     setClicked(true)
     setTimeout(() => {
       setClicked(false)
-    }, timeToDissapear)
+    }, TIME_TO_DISAPPEAR)
   }
 
   return (
@@ -21,7 +25,7 @@ const ColorCell = ({ color, percent }: { color: string; percent?: string }) => {
         className={classnames(styles.cell, {
           [styles['cell--copied']]: clicked,
         })}
-        style={{ '--content': `${color}`, '--delay': `${timeToDissapear / 1000}s` } as React.CSSProperties}
+        style={{ '--content': `${color}`, '--delay': `${TIME_TO_DISAPPEAR / 1000}s` } as React.CSSProperties}
         onClick={handleClick}
       ></div>
       <p className={styles.text}>{color}</p>

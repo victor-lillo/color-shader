@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ColorObject } from '@types'
+import { ColorObject } from 'types'
 import CopyBlock from '@components/CopyBlock'
 import styles from './CustomProperties.module.scss'
 
