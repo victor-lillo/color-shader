@@ -1,4 +1,4 @@
-import { ColorObject } from '@types'
+import { ColorObject } from 'types'
 import ColorRow from '@components/ColorRow'
 import CustomProperties from '@components/CustomProperties'
 import { getDarker, getLighter, getOpacities } from '@utils/colorFunctions'
