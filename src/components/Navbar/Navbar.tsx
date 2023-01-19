@@ -13,9 +13,7 @@ function Navbar() {
       <header className={styles.navbar}>
         <div className={styles.navbar__container}>
           <Link href='/'>
-            <a>
-              <Logo className={styles.logo} />
-            </a>
+            <Logo className={styles.logo} />
           </Link>
           <a target='_blank' href={GITHUB_PROJECT_URL} rel='noopener noreferrer'>
             <GitHub className={styles.logo} />

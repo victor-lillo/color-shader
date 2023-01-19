@@ -11,26 +11,24 @@
     "github-update": "node dev/github-update.js"
   },
   "dependencies": {
-    "classnames-creator": "^1.0.6",
-    "next": "^12.2.0",
+    "classnames-creator": "1.0.6",
+    "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-elegant-switch": "^1.0.3",
-    "sharp": "^0.30.7",
-    "sitemap": "^7.1.1",
-    "swr": "^1.3.0",
-    "zustand": "^4.3.2"
+    "react-elegant-switch": "1.0.3",
+    "sitemap": "7.1.1",
+    "zustand": "4.3.2"
   },
   "devDependencies": {
-    "@types/node": "18.0.0",
-    "@types/react": "18.0.14",
-    "@types/react-dom": "18.0.5",
-    "dotenv": "^16.0.1",
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6",
-    "rimraf": "^3.0.2",
-    "sass": "^1.53.0",
-    "typescript": "4.7.4"
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "dotenv": "16.0.3",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.2",
+    "rimraf": "4.1.1",
+    "sass": "1.57.1",
+    "typescript": "4.9.4"
   },
   "license": "MIT"
 }
