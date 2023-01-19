@@ -21,8 +21,9 @@
       "@pages/*": ["./src/pages/*"],
       "@public/*": ["public/*"],
       "@sass_settings/*": ["./src/styles/settings/*"],
-      "@types": ["./src/types/types.ts"],
-      "@utils/*": ["./src/utils/*"]
+      "@store/*": ["./src/store/*"],
+      "@utils/*": ["./src/utils/*"],
+      "types": ["./src/types/types.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

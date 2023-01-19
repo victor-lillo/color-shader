@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ColorObject } from '@types'
+import { ColorObject } from 'types'
 import useCssCustomProperties from '@hooks/useCssCustomProperties'
 import styles from './CopyBlock.module.scss'
 

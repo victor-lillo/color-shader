@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ColorObject } from '@types'
+import { ColorObject } from 'types'
 
 // ColorObject -> Custom properties
 const useCssCustomProperties = ({
