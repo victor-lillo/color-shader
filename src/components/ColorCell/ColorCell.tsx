@@ -8,9 +8,9 @@ const ColorCell = ({ color, percent }: { color: string; percent?: string }) => {
   const TIME_TO_DISAPPEAR = 2400
 
   const { withHash } = useWithHashStore()
+
   const handleClick = () => {
     const copyColor = withHash ? color : color.replace('#', '')
-    console.log(withHash)
     navigator.clipboard.writeText(copyColor)
     setClicked(true)
     setTimeout(() => {
