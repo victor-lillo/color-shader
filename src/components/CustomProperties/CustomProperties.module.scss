@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: var(--size-spacing-3);
   overflow-x: auto; // If custom properties are too long, scroll
+  content-visibility: auto;
 }
 
 .form {
