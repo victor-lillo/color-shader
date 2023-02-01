@@ -4,11 +4,11 @@
 
 #### 🎨 Just select your color
 
-[<img src="docs/screenshot_2.png" />](https://color-shader.vercel.app/#b960e2)
+[<img src="docs/screenshot_2.png" />](https://color-shader.vercel.app/#327ffb)
 
 #### ⚙ Modify the prefix and the number of steps
 
-[<img src="docs/screenshot_3.png" />](https://color-shader.vercel.app/#b960e2/16)
+[<img src="docs/screenshot_3.png" />](https://color-shader.vercel.app/#327ffb/16)
 
 ## Features
 
