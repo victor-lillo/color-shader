@@ -58,7 +58,9 @@ const ColorPicker = ({
         <label className={styles.text} htmlFor='quantity'>
           Do you want to copy the #?
         </label>
-        <ElegantSwitch checked={withHash} onChange={handleSwitchChange} />
+        <div className={styles['elegant-switch']}>
+          <ElegantSwitch checked={withHash} onChange={handleSwitchChange} />
+        </div>
       </div>
       {color && (
         <div className={styles['color-display']}>
