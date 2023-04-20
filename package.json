@@ -12,23 +12,23 @@
   },
   "dependencies": {
     "classnames-creator": "1.0.6",
-    "next": "13.1.2",
+    "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-elegant-switch": "1.0.3",
     "sitemap": "7.1.1",
-    "zustand": "4.3.2"
+    "zustand": "4.3.7"
   },
   "devDependencies": {
-    "@types/node": "18.11.18",
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
+    "@types/node": "18.15.12",
+    "@types/react": "18.0.37",
+    "@types/react-dom": "18.0.11",
     "dotenv": "16.0.3",
-    "eslint": "8.32.0",
-    "eslint-config-next": "13.1.2",
-    "rimraf": "4.1.1",
-    "sass": "1.57.1",
-    "typescript": "4.9.4"
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "rimraf": "5.0.0",
+    "sass": "1.62.0",
+    "typescript": "5.0.4"
   },
   "license": "MIT"
 }
