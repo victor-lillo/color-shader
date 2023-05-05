@@ -38,10 +38,10 @@ export default function CopyBlock(props: { colorObj: ColorObject; inputColor: st
           const displayValue = value.startsWith('#') ? value : '#' + value
           return (
             <div className={styles.line} key={key} style={{ '--color': displayValue } as React.CSSProperties}>
-              <span>{key}</span>: <span className={styles.line__value}>{displayValue}</span>;
               <button title='Delete this line' onClick={() => handleDelete(key)} className={styles.line__button}>
                 ❌
               </button>
+              <span>{key}</span>: <span className={styles.line__value}>{displayValue}</span>;
             </div>
           )
         })}
