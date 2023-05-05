@@ -3,9 +3,9 @@ import { ElegantSwitch } from 'react-elegant-switch'
 import classnames from 'classnames-creator'
 import { normalizeHex } from '@utils/colorFunctions'
 import ColorCell from '@components/ColorCell'
-import styles from './ColorPicker.module.scss'
+import styles from './InputsLayout.module.scss'
 import useWithHashStore from '@store/useWithHashStore'
-const ColorPicker = ({
+const InputsLayout = ({
   color,
   quantity,
   handleChange,
@@ -74,4 +74,4 @@ const ColorPicker = ({
   )
 }
 
-export default ColorPicker
+export default InputsLayout

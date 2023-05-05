@@ -2,9 +2,9 @@ import { ColorObject } from 'types'
 import ColorRow from '@components/ColorRow'
 import CustomProperties from '@components/CustomProperties'
 import { getDarker, getLighter, getOpacities } from '@utils/colorFunctions'
-import styles from './ColorTable.module.scss'
+import styles from './ColorShadesLayout.module.scss'
 
-export default function ColorTable({ inputColor, quantity = 1 }: { quantity?: number; inputColor: string }) {
+export default function ColorShadesLayout({ inputColor, quantity = 1 }: { quantity?: number; inputColor: string }) {
   // As quantity could be NaN when parseInt(''), we catch the value here
   const safeQuantity = isNaN(quantity) || quantity === 0 ? 1 : quantity
   const colorObj: ColorObject = {

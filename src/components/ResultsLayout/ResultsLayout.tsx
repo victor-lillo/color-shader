@@ -1,5 +1,5 @@
-import ColorPicker from '@components/ColorPicker'
-import ColorTable from '@components/ColorTable'
+import InputsLayout from '@components/InputsLayout'
+import ColorShadesLayout from '@components/ColorShadesLayout'
 
 import validateHex from '@utils/validateHex'
 import useColorFromPath from '@hooks/useColorFromPath'
@@ -27,12 +27,12 @@ export default function ResultsLayout() {
   return (
     <>
       <section className='section'>
-        <ColorPicker color={color} quantity={quantity} handleChange={handleChange} />
+        <InputsLayout color={color} quantity={quantity} handleChange={handleChange} />
       </section>
 
       {color !== initialColorValue && validateHex(color) && (
         <section className='section'>
-          <ColorTable inputColor={color} quantity={quantity} />
+          <ColorShadesLayout inputColor={color} quantity={quantity} />
         </section>
       )}
     </>
