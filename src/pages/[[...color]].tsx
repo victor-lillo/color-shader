@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Layout from '@components/Layout'
 import Head from 'next/head'
 
-import ColorModule from '@components/ColorModule'
+import ResultsLayout from '@components/ResultsLayout'
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <ColorModule />
+      <ResultsLayout />
     </Layout>
   )
 }

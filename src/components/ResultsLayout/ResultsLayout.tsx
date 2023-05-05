@@ -9,7 +9,7 @@ import useHandleRoutes from '@hooks/useHandleRoutes'
 const initialColorValue = ''
 const initialQuantityValue = 10
 
-export default function ColorModule() {
+export default function ResultsLayout() {
   const [color, setColor] = useColorFromPath(initialColorValue)
   const [quantity, setQuantity] = useQuantityFromPath(initialQuantityValue)
   useHandleRoutes({
