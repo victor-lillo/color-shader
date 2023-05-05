@@ -5,6 +5,9 @@ import { normalizeHex } from '@utils/colorFunctions'
 import ColorCell from '@components/ColorCell'
 import styles from './InputsLayout.module.scss'
 import useWithHashStore from '@store/useWithHashStore'
+
+const DEFAULT_COLOR = '#1e1e1e'
+
 const InputsLayout = ({
   color,
   quantity,
@@ -15,7 +18,7 @@ const InputsLayout = ({
   handleChange: ReactEventHandler
 }) => {
   // Prevents '#' value warning in input color
-  const normalizedColor = color ? '#' + normalizeHex(color) : '#1e1e1e'
+  const normalizedColor = color ? '#' + normalizeHex(color) : DEFAULT_COLOR
 
   const { withHash, toggle } = useWithHashStore()
 
