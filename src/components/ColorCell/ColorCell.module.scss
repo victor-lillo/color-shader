@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 120px;
 }
 
 .cell {

@@ -4,6 +4,7 @@
   gap: var(--size-spacing-3);
   overflow-x: auto; // If custom properties are too long, scroll
   content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }
 
 .form {
