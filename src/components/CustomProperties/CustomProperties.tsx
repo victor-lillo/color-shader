@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { ColorObject } from 'types'
+import { CUSTOM_PROP_BASE_NAME, PREFIX_NAME } from '../../contants'
 import CopyBlock from '@components/CopyBlock'
 import styles from './CustomProperties.module.scss'
-import { PREFIX_NAME } from '../../contants'
 
 export default function CustomProperties(props: { colorObj: ColorObject; inputColor: string }) {
-  const [prefix, setPrefix] = useState('f-primary')
+  const [prefix, setPrefix] = useState(CUSTOM_PROP_BASE_NAME)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target as HTMLInputElement
