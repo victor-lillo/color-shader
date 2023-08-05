@@ -1,10 +1,10 @@
 import { ReactEventHandler } from 'react'
-import { ElegantSwitch } from 'react-elegant-switch'
+import styles from './InputsLayout.module.scss'
 import classnames from 'classnames-creator'
 import { normalizeHex } from '@utils/colorFunctions'
-import ColorCell from '@components/ColorCell'
-import styles from './InputsLayout.module.scss'
 import useWithHashStore from '@store/useWithHashStore'
+import ColorCell from '@components/ColorCell'
+import { ElegantSwitch } from 'react-elegant-switch'
 import { COLOR_NAME, QUANTITY_NAME } from '../../contants'
 
 const DEFAULT_COLOR = '#1e1e1e'

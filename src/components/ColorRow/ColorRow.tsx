@@ -1,5 +1,5 @@
-import ColorCell from '@components/ColorCell'
 import styles from './ColorRow.module.scss'
+import ColorCell from '@components/ColorCell'
 
 const ColorRow = ({ array }: { array: string[] }) => {
   return (

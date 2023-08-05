@@ -1,7 +1,7 @@
-import classnames from 'classnames-creator'
 import { useState } from 'react'
-import useWithHashStore from '@store/useWithHashStore'
 import styles from './ColorCell.module.scss'
+import classnames from 'classnames-creator'
+import useWithHashStore from '@store/useWithHashStore'
 const ColorCell = ({ color, percent }: { color: string; percent?: string }) => {
   const [clicked, setClicked] = useState<boolean>(false)
 

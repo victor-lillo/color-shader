@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { ColorObject } from 'types'
-import useCssCustomProperties from '@hooks/useCssCustomProperties'
 import styles from './CopyBlock.module.scss'
+import useCssCustomProperties from '@hooks/useCssCustomProperties'
 
 export default function CopyBlock(props: { colorObj: ColorObject; inputColor: string; prefix: string }) {
   const textBlock = useRef<HTMLDivElement>(null)

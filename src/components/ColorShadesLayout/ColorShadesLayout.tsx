@@ -1,8 +1,8 @@
+import styles from './ColorShadesLayout.module.scss'
 import { ColorObject } from 'types'
+import { getDarker, getLighter, getOpacities } from '@utils/colorFunctions'
 import ColorRow from '@components/ColorRow'
 import CustomProperties from '@components/CustomProperties'
-import { getDarker, getLighter, getOpacities } from '@utils/colorFunctions'
-import styles from './ColorShadesLayout.module.scss'
 
 export default function ColorShadesLayout({ inputColor, quantity = 1 }: { quantity?: number; inputColor: string }) {
   // As quantity could be NaN when parseInt(''), we catch the value here
