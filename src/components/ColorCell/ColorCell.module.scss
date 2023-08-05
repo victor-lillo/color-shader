@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   content-visibility: auto;
-  contain-intrinsic-size: auto 120px;
+  contain-intrinsic-size: auto 96px;
+  flex-shrink: 0; // Necessary for width to be applied
 }
 
 .cell {
