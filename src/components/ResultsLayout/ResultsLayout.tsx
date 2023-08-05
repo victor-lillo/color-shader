@@ -5,7 +5,7 @@ import validateHex from '@utils/validateHex'
 import useColorFromPath from '@hooks/useColorFromPath'
 import useQuantityFromPath from '@hooks/useQuantityFromPath'
 import useHandleRoutes from '@hooks/useHandleRoutes'
-import { COLOR_NAME, QUANTITY_NAME } from '../../contants'
+import { COLOR_NAME, QUANTITY_NAME } from '../../constants'
 
 const initialColorValue = ''
 const initialQuantityValue = 10

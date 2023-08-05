@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ColorObject } from 'types'
 import styles from './CustomProperties.module.scss'
-import { CUSTOM_PROP_BASE_NAME, PREFIX_NAME } from '../../contants'
+import { CUSTOM_PROP_BASE_NAME, PREFIX_NAME } from '../../constants'
 import CopyBlock from '@components/CopyBlock'
 
 export default function CustomProperties(props: { colorObj: ColorObject; inputColor: string }) {

@@ -5,7 +5,7 @@ import { normalizeHex } from '@utils/colorFunctions'
 import useWithHashStore from '@store/useWithHashStore'
 import ColorCell from '@components/ColorCell'
 import { ElegantSwitch } from 'react-elegant-switch'
-import { COLOR_NAME, QUANTITY_NAME } from '../../contants'
+import { COLOR_NAME, QUANTITY_NAME } from '../../constants'
 
 const DEFAULT_COLOR = '#1e1e1e'
 
