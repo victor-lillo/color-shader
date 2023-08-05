@@ -26,14 +26,14 @@ export default function ResultsLayout() {
   }
   return (
     <>
-      <section className='section'>
+      <article className='article'>
         <InputsLayout color={color} quantity={quantity} handleChange={handleChange} />
-      </section>
+      </article>
 
       {color !== initialColorValue && validateHex(color) && (
-        <section className='section'>
+        <article className='article'>
           <ColorShadesLayout inputColor={color} quantity={quantity} />
-        </section>
+        </article>
       )}
     </>
   )
