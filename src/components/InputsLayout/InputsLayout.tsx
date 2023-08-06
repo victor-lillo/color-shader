@@ -1,10 +1,11 @@
 import { ReactEventHandler } from 'react'
-import { ElegantSwitch } from 'react-elegant-switch'
+import styles from './InputsLayout.module.scss'
 import classnames from 'classnames-creator'
 import { normalizeHex } from '@utils/colorFunctions'
-import ColorCell from '@components/ColorCell'
-import styles from './InputsLayout.module.scss'
 import useWithHashStore from '@store/useWithHashStore'
+import ColorCell from '@components/ColorCell'
+import { ElegantSwitch } from 'react-elegant-switch'
+import { COLOR_NAME, QUANTITY_NAME } from '../../constants'
 
 const DEFAULT_COLOR = '#1e1e1e'
 
@@ -29,7 +30,7 @@ const InputsLayout = ({
   return (
     <div style={{ '--picked-color': normalizedColor } as React.CSSProperties} className={styles.container}>
       <div className={styles['form-group']}>
-        <label className={styles.text} htmlFor='color'>
+        <label className={styles.text} htmlFor={COLOR_NAME}>
           Choose a color!
         </label>
         <div className={styles['form-group__input-group']}>
@@ -38,13 +39,13 @@ const InputsLayout = ({
             onChange={handleChange}
             type='text'
             value={color}
-            name='color'
+            name={COLOR_NAME}
           />
-          <input onChange={handleChange} type='color' value={normalizedColor} name='color' />
+          <input onChange={handleChange} type={COLOR_NAME} value={normalizedColor} name={COLOR_NAME} />
         </div>
       </div>
       <div className={styles['form-group']}>
-        <label className={styles.text} htmlFor='quantity'>
+        <label className={styles.text} htmlFor={QUANTITY_NAME}>
           Choose a quantity!
         </label>
         <input
@@ -52,15 +53,13 @@ const InputsLayout = ({
           onChange={handleChange}
           type='number'
           value={quantity}
-          name='quantity'
+          name={QUANTITY_NAME}
           min={1}
           max={99}
         />
       </div>
       <div className={styles['form-group']}>
-        <label className={styles.text} htmlFor='quantity'>
-          Do you want to copy the #?
-        </label>
+        <p className={styles.text}>Do you want to copy the #?</p>
         <div className={styles['elegant-switch']}>
           <ElegantSwitch checked={withHash} onChange={handleSwitchChange} />
         </div>

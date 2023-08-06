@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { DEBOUNCE_ROUTE_TIMEOUT } from '../constants'
 
 const useHandleRoutes = ({
   color,
@@ -25,7 +26,7 @@ const useHandleRoutes = ({
         return
       }
       router.push(`/${color}/${quantity}`, undefined, { shallow: true })
-    }, 300)
+    }, DEBOUNCE_ROUTE_TIMEOUT)
     return () => window.clearTimeout(timeout)
   }, [color, quantity])
 }

@@ -5,6 +5,7 @@ import validateHex from '@utils/validateHex'
 import useColorFromPath from '@hooks/useColorFromPath'
 import useQuantityFromPath from '@hooks/useQuantityFromPath'
 import useHandleRoutes from '@hooks/useHandleRoutes'
+import { COLOR_NAME, QUANTITY_NAME } from '../../constants'
 
 const initialColorValue = ''
 const initialQuantityValue = 10
@@ -21,19 +22,19 @@ export default function ResultsLayout() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { value, name } = e.target as HTMLInputElement
-    if (name === 'color') setColor(value)
-    if (name === 'quantity') setQuantity(parseInt(value)) // When empty -> isNaN
+    if (name === COLOR_NAME) setColor(value)
+    if (name === QUANTITY_NAME) setQuantity(parseInt(value)) // When empty -> isNaN
   }
   return (
     <>
-      <section className='section'>
+      <article className='article'>
         <InputsLayout color={color} quantity={quantity} handleChange={handleChange} />
-      </section>
+      </article>
 
       {color !== initialColorValue && validateHex(color) && (
-        <section className='section'>
+        <article className='article'>
           <ColorShadesLayout inputColor={color} quantity={quantity} />
-        </section>
+        </article>
       )}
     </>
   )

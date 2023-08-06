@@ -1,7 +1,5 @@
-import React from 'react'
-import Link from 'next/link'
-
 import styles from './Navbar.module.scss'
+import Link from 'next/link'
 import Logo from '@components/icons/Logo'
 import GitHub from '@components/icons/GitHub'
 
