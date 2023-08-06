@@ -9,7 +9,7 @@ export default function CopyBlock(props: { colorObj: ColorObject; inputColor: st
   const { customProperties, deleteOne } = useCssCustomProperties(props)
 
   useEffect(() => {
-    setIsCopied(false)
+    if (isCopied) setIsCopied(false)
   }, [props.colorObj, props.inputColor, props.prefix])
 
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
