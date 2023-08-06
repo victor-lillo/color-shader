@@ -19,7 +19,7 @@ const ColorCell = ({ color, percent }: { color: string; percent?: string }) => {
   }
 
   return (
-    <div className={styles.container}>
+    <article className={styles.container}>
       {percent && <p className={styles.text}>{`${percent}%`}</p>}
       <div
         className={classnames(styles.cell, {
@@ -28,8 +28,8 @@ const ColorCell = ({ color, percent }: { color: string; percent?: string }) => {
         style={{ '--content': `${color}`, '--delay': `${TIME_TO_DISAPPEAR / 1000}s` } as React.CSSProperties}
         onClick={handleClick}
       ></div>
-      <p className={styles.text}>{color}</p>
-    </div>
+      <h3 className={styles.text}>{color}</h3>
+    </article>
   )
 }
 
