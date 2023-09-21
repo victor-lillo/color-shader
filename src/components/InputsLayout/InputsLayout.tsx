@@ -60,9 +60,7 @@ const InputsLayout = ({
       </div>
       <div className={styles['form-group']}>
         <p className={styles.text}>Do you want to copy the #?</p>
-        <div className={styles['elegant-switch']}>
-          <ElegantSwitch checked={withHash} onChange={handleSwitchChange} />
-        </div>
+        <ElegantSwitch checked={withHash} onChange={handleSwitchChange} />
       </div>
       {color && (
         <div className={styles['color-display']}>
