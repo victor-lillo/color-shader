@@ -28,7 +28,7 @@ const InputsLayout = ({
   }
 
   return (
-    <div style={{ '--picked-color': normalizedColor } as React.CSSProperties} className={styles.container}>
+    <section style={{ '--picked-color': normalizedColor } as React.CSSProperties} className={styles.container}>
       <div className={styles['form-group']}>
         <label className={styles.text} htmlFor={COLOR_NAME}>
           Choose a color!
@@ -70,7 +70,7 @@ const InputsLayout = ({
           <ColorCell color={normalizedColor} />
         </div>
       )}
-    </div>
+    </section>
   )
 }
 
