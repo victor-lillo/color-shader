@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Logo from '@components/icons/Logo'
 import GitHub from '@components/icons/GitHub'
 
-const GITHUB_PROJECT_URL = 'https://github.com/fentosv/' + process.env.NEXT_PUBLIC_GITHUB_PROJECT_NAME
+const GITHUB_PROJECT_URL = 'https://github.com/victor-lillo/' + process.env.NEXT_PUBLIC_GITHUB_PROJECT_NAME
 
 function Navbar() {
   return (

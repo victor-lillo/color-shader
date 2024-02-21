@@ -1,7 +1,7 @@
 import GitHub from '@components/icons/GitHub'
 import styles from './Footer.module.scss'
 
-const GithubProjectUrl = 'https://github.com/fentosv/' + process.env.NEXT_PUBLIC_GITHUB_PROJECT_NAME
+const GithubProjectUrl = 'https://github.com/victor-lillo/' + process.env.NEXT_PUBLIC_GITHUB_PROJECT_NAME
 
 function Footer() {
   return (
@@ -14,7 +14,7 @@ function Footer() {
               <a
                 className={styles.footer__text__link}
                 target='_blank'
-                href='https://github.com/fentosv'
+                href='https://github.com/victor-lillo'
                 rel='noopener noreferrer'
               >
                 Fentos
